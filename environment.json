@@ -1,0 +1,14 @@
+{
+  "install": "mix deps.get && mix deps.compile && mix tailwind.install --if-missing && mix esbuild.install --if-missing",
+  "start": "ntpdate -s pool.ntp.org && service postgresql start && mix ecto.setup",
+  "terminals": [
+    {
+      "name": "Phoenix Server",
+      "command": "mix phx.server"
+    }
+  ],
+  "build": {
+    "context": ".",
+    "dockerfile": "Dockerfile"
+  }
+}
