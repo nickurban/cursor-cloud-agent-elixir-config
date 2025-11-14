@@ -1,7 +1,7 @@
 FROM elixir:1.19-otp-28-slim
 
 RUN apt update -y
-RUN apt install -y curl git inotify-tools postgresql build-essential tzdata ntpdate sudo npm nodejs
+RUN apt install -y curl git inotify-tools postgresql build-essential tzdata ntpdate sudo npm nodejs python3
 RUN mix local.hex --force && mix local.rebar --force
 
 # Set a password on the postgres user that matches the Phoenix default.
