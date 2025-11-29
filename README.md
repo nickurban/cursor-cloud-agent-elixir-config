@@ -12,13 +12,11 @@ Simply copy this Dockerfile and environment.json files into the .cursor folder o
 
 ## Customization
 
-If you are using Ash, replace `mix ecto.setup` with `mix ash.setup`.
+`environment.json` may need to be customized:
 
-If you are using node, add npm install to the install line, e.g.
-
-```
-  "install": "mix deps.get && mix deps.compile && mix tailwind.install --if-missing && mix esbuild.install --if-missing && npm --prefix assets install",
-```
+- If you are not using dialyzer, remove that from environment.json.
+- If you are using Ash, replace `mix ecto.setup` with `mix ash.setup`.
+- If you are using node, add `npm --prefix assets install` to the install line, e.g.
 
 ## AGENTS.md
 

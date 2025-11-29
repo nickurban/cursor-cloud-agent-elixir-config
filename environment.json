@@ -1,6 +1,6 @@
 {
-  "install": "mix deps.get && mix deps.compile && mix tailwind.install --if-missing && mix esbuild.install --if-missing",
-  "start": "ntpdate -s pool.ntp.org && service postgresql start && mix ecto.setup",
+  "install": "mix deps.get && mix compile && MIX_ENV=test mix compile && mix tailwind.install --if-missing && mix esbuild.install --if-missing && npm --prefix assets install && mix dialyzer --plt",
+  "start": "sudo ntpdate -s pool.ntp.org && sudo service postgresql start && mix ecto.setup",
   "terminals": [
     {
       "name": "Phoenix Server",
