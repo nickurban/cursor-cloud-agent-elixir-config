@@ -4,19 +4,20 @@ I've found [Cursor Cloud Agents](https://cursor.com/docs/cloud-agent) to be very
 
 Despite the simplicity of these configuration files, it took me a while to find exactly the right  setup, so I thought I'd share them.
 
-Feel free to make improvements and send PRs!
+Feel free to make improvements or use this as the basis for your own configuration.
 
 ## Installation
 
-Simply copy this Dockerfile and environment.json files into the .cursor folder of your project.
+Copy this Dockerfile, environment.json, and install.sh into the .cursor folder of your project.
+
+## Skills
+
+Note, the install script will copy the skills from https://github.com/nickurban/elixir-phoenix-ash-skills into .codex/skills in the runtime (which is used by Cursor as well as Codex).
 
 ## Customization
 
-`environment.json` may need to be customized:
-
-- If you are not using dialyzer, remove that from environment.json.
-- If you are using Ash, replace `mix ecto.setup` with `mix ash.setup`.
-- If you are using node, add `npm --prefix assets install` to the install line, e.g.
+`install.sh` or `environment.json` may need to be customized to install (or not install) different things,
+or to skip copying over the skills mentioned above.
 
 ## AGENTS.md
 
