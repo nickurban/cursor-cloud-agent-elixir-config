@@ -25,3 +25,8 @@ Make sure you have an appropriate AGENTS.md in your project.
 Phoenix generates one by default now, and [usage_rules](https://github.com/ash-project/usage_rules) is your friend.
 
 I don't recommend using a coding agent with Ash without usage rules.
+
+## Author
+
+Copyright Nick Urban 2026
+

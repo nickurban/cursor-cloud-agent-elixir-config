@@ -1,10 +1,10 @@
 {
-  "install": "mix deps.get && mix compile && MIX_ENV=test mix compile && mix tailwind.install --if-missing && mix esbuild.install --if-missing && npm --prefix assets install && mix dialyzer --plt",
-  "start": "sudo ntpdate -s pool.ntp.org && sudo service postgresql start && mix ecto.setup",
+  "install": "bash .cursor/install.sh",
+  "start": "sudo ntpdate -s pool.ntp.org && sudo service postgresql start && mix ash.setup",
   "terminals": [
     {
       "name": "Phoenix Server",
-      "command": "mix phx.server"
+      "command": "PORT=4000 iex -S mix phx.server"
     }
   ],
   "build": {
